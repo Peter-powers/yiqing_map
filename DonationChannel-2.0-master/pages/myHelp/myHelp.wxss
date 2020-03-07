@@ -1,0 +1,67 @@
+@import "../../colorui/main.wxss";
+.body {
+    width: 90%;
+    margin-left: 5%;
+}
+.petInfo {
+    margin-top: 30rpx;
+    width: 100%;
+    padding:  20rpx 30rpx 10rpx 30rpx;
+    background-color: white;
+    border-radius: 20rpx;
+    box-shadow: 0 0 10rpx #888888;
+}
+
+.infoTitle {
+    font-size: 28rpx;
+    font-weight: bold;
+    margin-bottom: 20rpx;
+    color: #1cbbb4;
+}
+.infoItem {
+    height: 90rpx;
+    line-height: 90rpx;
+}
+.key {
+    opacity: .8;
+}
+
+.avatar {
+    height: 140rpx;
+    line-height: 140rpx;
+}
+.avatar image {
+    width: 120rpx;
+    height: 120rpx;
+    border-radius: 50%;
+}
+.button-lg {
+    width: 100%;
+    height: 100rpx;
+    line-height: 100rpx;
+    background-color: #1cbbb4;
+    border-radius: 50rpx;
+    margin-top: 30rpx;
+    margin-bottom: 30rpx;
+    text-align: center;
+    color: white;
+    font-size: 32rpx
+}
+.button-lg-choose {
+    width: 100%;
+    height: 90rpx;
+    line-height: 90rpx;
+    background-color: white;
+    border-radius: 50rpx;
+    margin-top: 30rpx;
+    margin-bottom: 30rpx;
+    text-align: center;
+    color: black;
+    font-size: 32rpx   
+}
+.button-lg-choose .choosed {
+    height: 90rpx;
+    border-radius: 50rpx;
+    background-color: #1cbbb4;
+    color: white;
+}

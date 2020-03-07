@@ -1,0 +1,16 @@
+<cu-custom bgColor="bg-red" isBack="{{true}}">
+  <view slot="content">选择求助关键词</view>
+  <view slot="backText">返回</view>  
+</cu-custom>
+<view class="body">
+  <view class="title">快速选择求助关键词</view>
+  <view class="keyContainer">
+    <view class="item">血浆...</view>
+    <view class="item">病床...</view>
+    <view class="item">宠物...</view>
+    <view class="item">...</view>
+    <view class="item">...</view>
+    <view class="item">...</view>
+  </view>
+  <view class="button-lg" bindtap="saveHelpKey">保存</view>
+</view>

@@ -1,0 +1,398 @@
+.map {
+  height: 100vh;
+  z-index: -1;
+}
+.demandsMap {
+  position: relative;
+}
+.infoLayer_1 {
+  width: 100%;
+  height: 180rpx;
+  z-index: 0;
+  position: absolute;
+  left: 0rpx;
+  top: 120rpx;
+  padding: 10rpx 10rpx 10rpx 10rpx;
+}
+.infoLayer_2 {
+  width: 100%;
+  /*height: 40rpx;*/
+  z-index: 0;
+  position: fixed;
+  bottom: 0;
+  padding: 10rpx 10rpx 10rpx 10rpx;
+}
+.totalDemands {
+  height: 100%;
+  background-color: #0081ff;
+  border-radius: 8rpx;
+  color: white;
+  padding: 10rpx;
+  box-shadow: 0 0 20rpx grey;
+}
+.totalDemands .title {
+  text-align: left;
+  font-size: 18px;
+  height: 60rpx;
+  line-height: 60rpx;
+}
+/*学习*/
+.totalDemands .items {
+  height: 80rpx;
+  line-height: 40rpx;
+  font-size: 12px;
+  overflow-x: scroll;
+  overflow-y: hidden;
+  white-space: nowrap;
+}
+.totalDemands .items .item {
+  width: 20%;
+  height: 80rpx;
+  display: inline-block;
+  padding: 0 3rpx 0 3rpx;
+  text-align: center;
+}
+.totalDemands .items .item:not(:last-child) {
+  border-right: dotted rgba(255, 255, 255, 0.8) 1rpx;
+}
+.totalDemands .items .item .name{
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+  
+  /* 让省略符显示在文本左侧 */
+  direction: rtl;
+}
+
+.notices {
+  width: 100%;
+  height: 40rpx;
+  line-height: 40rpx;
+  background-color: #e94f4f;
+  border-radius: 6rpx;
+  color: white;
+  display: flex;
+  justify-content: space-around;
+  box-shadow: 0 0 20rpx grey;
+}
+.notices .icon {
+  width: 30rpx;
+  height: 40rpx;
+  margin-right: 5rpx;
+}
+.notices .icon img{
+  width: 20rpx;
+  height: 20rpx;
+  vertical-align: middle;
+}
+.notices .link {
+  width: 20rpx;
+  height: 20rpx;
+}
+.notices .link img{
+  width: 20rpx;
+  height: 20rpx;
+  vertical-align: middle;
+}
+.notices .content {
+  flex: 1;
+  text-align: left;
+}
+.hospitalInfo {
+  width: 100%;
+  background-color: white;
+  padding: 10rpx;
+  border-radius: 6rpx;
+  box-shadow: 0 0 20rpx white;
+}
+.hospitalInfo .title {
+  height: 50rpx;
+  line-height: 50rpx;
+  display: flex;
+  margin-bottom: 20rpx;
+  /*background-color: red;*/
+}
+.hospitalInfo .title .name {
+  flex: 1;
+  font-weight: bold;
+  font-size: 1.1rem;
+  text-align: left;
+  opacity: .8;
+
+  overflow-x: scroll;
+  overflow-y: hidden;
+  white-space: nowrap;
+}
+.hospitalInfo .title img {
+  width: 20rpx;
+  height: 20rpx;
+}
+.hospitalInfo .link {
+  width: 30rpx;
+  height: 30rpx;
+}
+.hospitalInfo .contact {
+  height: 120rpx;
+}
+  
+.hospitalInfo .contact .top{
+  height: 80rpx;
+  display: flex;
+  justify-content: center;
+}
+.hospitalInfo .contact .bottom{
+  height: 40rpx;
+  line-height: 40rpx;
+  text-align: left;
+  opacity: .6;
+}
+.hospitalInfo .contact .top .left{
+  flex: 3;
+  height: 80rpx;
+}
+.hospitalInfo .contact .top .right{
+  flex: 1;
+  height: 40rpx;
+  color: white;
+  background-color: #0081ff;
+  padding: 0 5rpx 0 5rpx;
+  border-radius: 20rpx;
+  text-align: center;
+}
+.hospitalInfo .contact .top .left .name{
+  height: 40rpx;
+  line-height: 40rpx;
+  text-align: left;
+  opacity: .6;
+}
+.hospitalInfo .contact .top .left .phone{
+  height: 40rpx;
+  line-height: 40rpx;
+  text-align: left;
+}
+.hospitalInfo .contact .top .left .phone .phoneTitle{
+  opacity: 0.6;
+}
+.hospitalInfo .contact .top .left .phone .phoneNumber{
+  color: #0081ff;
+  opacity: 1;
+  font-weight: bold;
+  overflow-x: scroll;
+  overflow-y: hidden;
+  white-space: nowrap;  
+}
+.hospitalInfo .contact .bottom {
+  overflow-x: scroll;
+  overflow-y: hidden;
+  white-space: nowrap; 
+}
+.demands {
+  margin-top: 10rpx;
+  padding-top: 10rpx;
+  text-align: left;
+  opacity: 0.6;
+  border-top: solid rgba(0, 0, 0, 0.1) 1rpx;
+}
+
+.chooseBtn {
+  position: fixed;
+  top: 50rpx;
+  left: 10rpx;
+  margin-top: 10rpx;
+  width: 200rpx;
+  height: 60rpx;
+  line-height: 60rpx;
+  border-radius: 30rpx;
+  display: flex;
+  justify-content: center;
+  color: white;
+  box-shadow: 0 0 10rpx grey;
+}
+.chooseBtn .left {
+  flex: 1;
+  text-align: center;
+  border-top-right-radius: 30rpx;
+  border-bottom-right-radius: 30rpx;  
+}
+.chooseBtn .leftChosed {
+  background-color: #e54d42;
+}
+.chooseBtn .leftDefault {
+  color: #e54d42;
+  background-color: white;
+}
+.chooseBtn .right {
+  flex: 1;
+  text-align: center;
+  border-top-left-radius: 30rpx;
+  border-bottom-left-radius: 30rpx;
+}
+.chooseBtn .rightChosed {
+  background-color: #0081ff;
+}
+.chooseBtn .rightDefault {
+  color: #0081ff;
+  background-color: white;
+}
+
+
+.helpInfo {
+  width: 100%;
+  background-color: white;
+  padding: 10rpx;
+  border-radius: 6rpx;
+  box-shadow: 0 0 20rpx white;
+}
+.helpInfo .title {
+  height: 50rpx;
+  line-height: 50rpx;
+  display: flex;
+  margin-bottom: 20rpx;
+  color: #e54d42;
+  font-size: 1.1rem;
+}
+.helpInfo .title .name {
+  flex: 1;
+  font-weight: bold;
+  font-size: 1.1rem;
+  text-align: left;
+  opacity: .8;
+
+  overflow-x: scroll;
+  overflow-y: hidden;
+  white-space: nowrap;
+}
+.helpInfo .title img {
+  width: 20rpx;
+  height: 20rpx;
+}
+.helpInfo .link {
+  width: 30rpx;
+  height: 30rpx;
+}
+.helpInfo .contact {
+  height: 120rpx;
+}
+  
+.helpInfo .contact .top{
+  height: 80rpx;
+  display: flex;
+  justify-content: center;
+}
+.helpInfo .contact .bottom{
+  height: 40rpx;
+  line-height: 40rpx;
+  text-align: left;
+  opacity: .6;
+}
+.helpInfo .contact .top .left{
+  flex: 3;
+  height: 80rpx;
+}
+.helpInfo .contact .top .right{
+  flex: 1;
+  height: 40rpx;
+  color: white;
+  background-color: #0081ff;
+  padding: 0 5rpx 0 5rpx;
+  border-radius: 20rpx;
+  text-align: center;
+}
+.helpInfo .contact .top .left .name{
+  height: 40rpx;
+  line-height: 40rpx;
+  text-align: left;
+  opacity: .6;
+}
+.helpInfo .contact .top .left .phone{
+  height: 40rpx;
+  line-height: 40rpx;
+  text-align: left;
+}
+.helpInfo .contact .top .left .phone .phoneTitle{
+  opacity: 0.6;
+}
+.helpInfo .contact .top .left .phone .phoneNumber{
+  color: #0081ff;
+  opacity: 1;
+  font-weight: bold;
+  overflow-x: scroll;
+  overflow-y: hidden;
+  white-space: nowrap;  
+}
+.helpInfo .contact .bottom {
+  overflow-x: scroll;
+  overflow-y: hidden;
+  white-space: nowrap; 
+}
+.helpInfo .content {
+  opacity: 0.6;
+}
+.nameContainer {
+  height: 40rpx;
+  line-height: 40rpx;
+  display: flex;
+  justify-content: space-between;
+}
+.nameContainer .name {
+  flex: none;
+}
+.nameContainer .states {
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+.nameContainer .states .tag {
+  width: 100rpx;
+  height: 30rpx;
+  line-height: 30rpx;
+  text-align: center;
+  border-radius: 15rpx;
+  color: white;
+  font-size: 0.7rem;
+  margin-right: 5rpx;
+}
+.high {
+  background-color: #e54d42;
+}
+.weibo {
+  background-color: #f29703;
+}
+.source {
+  background-color: #1cbbb4;
+}
+.helpInfo .content .desc {
+  margin-top: 5rpx;
+  padding-top: 5rpx;
+  border-top: solid 1rpx rgba(0, 0, 0, 0.3);
+}
+.entranceBtn{
+  width: 100%;
+  height: 80rpx;
+  display: flex;
+  justify-content: space-between;
+}
+.entranceBtn .btn{
+  width: 80rpx;
+  height: 80rpx;
+  border-radius: 40rpx;
+    -webkit-animation-name: scaleDraw; /*关键帧名称*/
+    -webkit-animation-timing-function: ease-in-out; /*动画的速度曲线*/
+    -webkit-animation-iteration-count: infinite;  /*动画播放的次数*/
+    -webkit-animation-duration: 5s; /*动画所花费的时间*/  
+}
+@keyframes scaleDraw {  /*定义关键帧、scaleDrew是需要绑定到选择器的关键帧名称*/
+    0%{
+        transform: scale(1);  /*开始为原始大小*/
+    }
+    25%{
+        transform: scale(1.1); /*放大1.1倍*/
+    }
+    50%{
+        transform: scale(1);
+    }
+    75%{
+        transform: scale(1.1);
+    }
+}

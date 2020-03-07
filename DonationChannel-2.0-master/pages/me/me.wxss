@@ -1,0 +1,126 @@
+@import "../../colorui/main.wxss";
+@import "../../colorui/icon.wxss";
+
+.backgroundHead{
+    position: relative;
+    width:100%;
+    height:250rpx;
+    overflow: hidden;
+    z-index: -1;
+    display: flex;
+    justify-content: center;
+}
+.backgroundHead:after {
+    width: 120%;
+    height: 250rpx;
+    position: absolute;
+    left: -10%;
+    top:0;
+    content: '';
+    border-radius: 0 0 50% 50%;
+    background: linear-gradient(#0081ff, #e6e6e6);
+}
+.backgroundHead .avatar {
+    z-index: 1;
+    width: 120rpx;
+    height: 120rpx;
+    border-radius: 50%;
+    margin-top: 5%;
+    box-shadow: 0 0 20rpx #0081ff;
+}
+.body {
+    width: 90%;
+    margin-left: 5%;
+    margin-bottom: 20rpx;
+}
+.title {
+    font-weight: bold;
+    font-size: 36rpx;
+}
+.memberCard {
+    width: 90%;
+    margin-left: 5%;
+    margin-top: 20rpx;
+    height: 280rpx;
+    border-radius: 8rpx;
+    box-shadow: 0rpx 0rpx 20rpx #888888;
+    background: linear-gradient(45deg, #141414, #666666, #141414);
+    display: flex;
+}
+.memberCardInfo {
+    flex: 3;
+    /*background-color: red;*/
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 25rpx 20rpx 25rpx 20rpx;
+}
+.memberCardInfo .store {
+    color: #e8c9a5;
+}
+.memberCardInfo .number {
+    color: white;
+}
+.memberCardLevel {
+    /*background-color: yellow;*/
+    flex: 2;
+    justify-content: space-around;
+    align-items: center;
+    color: #e8c9a5;
+    display: flex;
+}
+
+@keyframes scaleDraw {  /*定义关键帧、scaleDrew是需要绑定到选择器的关键帧名称*/
+    0%{
+        transform: scale(1);  /*开始为原始大小*/
+    }
+    25%{
+        transform: scale(1.1); /*放大1.1倍*/
+    }
+    50%{
+        transform: scale(1);
+    }
+    75%{
+        transform: scale(1.1);
+    }
+}
+
+.memberCardLevel image {
+    width: 100rpx;
+    height: 100rpx;
+    -webkit-animation-name: scaleDraw; /*关键帧名称*/
+    -webkit-animation-timing-function: ease-in-out; /*动画的速度曲线*/
+    -webkit-animation-iteration-count: infinite;  /*动画播放的次数*/
+    -webkit-animation-duration: 5s; /*动画所花费的时间*/
+}
+.tableContainer {
+    background-color: white;
+    border-radius: 20rpx;
+    width: 100%;
+    padding: 0 30rpx 0 30rpx;
+}
+
+/*好好学习*/
+.tableContainer .item {
+    height: 100rpx;
+    line-height: 100rpx;
+    display: flex;
+    justify-content: space-between;
+}
+/*好好学习*/
+.tableContainer .item:not(:last-child) {
+    /*border-bottom: dashed #ddd 1rpx;*/
+}
+
+.tableContainer .item .name {
+    /*opacity: 0.8;*/
+}
+
+.tableContainer .item .value {
+    opacity: 0.8;
+    font-size: 0.75rem;
+}
+
+.mainColor {
+    color: #0081ff;
+}

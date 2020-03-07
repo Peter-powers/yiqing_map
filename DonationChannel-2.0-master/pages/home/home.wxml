@@ -1,0 +1,85 @@
+<view class="demandsMap">
+  <map id="myMap" class="map"
+     markers="{{markers}}"
+     style="width:100%;height:100vh;"
+     longitude="{{initialLocation.longitude}}"
+     latitude="{{initialLocation.latitude}}"
+     bindmarkertap="markertap"
+     scale='15'>
+  </map>
+  <view class="chooseBtn" bindtap="changeMapContent">
+    <view class="right {{mapLevelIsLeft ? 'rightChosed': 'rightDefault'}}">医院</view>
+    <view class="left {{!mapLevelIsLeft ? 'leftChosed': 'leftDefault'}}">个人</view>
+  </view>   
+  <view class="infoLayer_1" wx:if="{{mapLevelIsLeft}}">
+    <view class="totalDemands">
+      <view class="title">全国医疗物资需求</view>
+      <view class="items">
+        <view class="item" wx:for="{{totalDemands}}" wx:for-index="key"  wx:for-item="value" wx:key="{{key}}">
+          <view class="count">{{value}}</view>
+          <view class="name">{{key}}</view>
+        </view>
+      </view>
+    </view>
+  </view>
+  <view class="infoLayer_2" wx:if="{{mapLevelIsLeft}}">
+   <!--    <view class="notices">
+        <view class="icon"></view>
+        <view class="content">武汉协和医院物资全部用尽（30分钟前）</view>
+        <view class="link"></view>
+      </view> -->
+    <view class="hospitalInfo" wx:if="{{currentHospital}}">
+      <view class="title">
+        <view class="name">{{ currentHospital.hospital }}</view>
+      </view>
+      <view class="contact">
+        <view class="top">
+          <view class="left">
+            <view class="name">医院对接人： {{ currentHospital.contacts }}</view>
+            <view class="phone"><span class="phoneTitle">对接人电话：</span> <span class="phoneNumber">{{currentHospital.mobile }}</span></view>
+          </view>
+          <view class="right" bindtap="copyToClickBoard(currentHospital)">
+            复制
+          </view>
+        </view>
+        <view class="bottom">捐赠地址： {{currentHospital.province + currentHospital.city +  currentHospital.area + currentHospital.street }}</view>
+      </view>
+      <view class="demands">需求产品： 一次性医用外科口罩0件、 N95口罩0件、 医用帽0件、 一次性医用防护服0件、 手术衣0件、 防护眼镜0件、 一次性医用乳胶手套0件、 
+      </view>
+    </view>
+  </view>
+
+  <view class="infoLayer_2" wx:if="{{!mapLevelIsLeft}}">
+    <view class="entranceBtn">
+      <navigator class="btn left" url="../../pages/publishDemand/publishDemand" hover-class="none">
+        <image class="img" src="../../images/map/publishBtn.png" mode="top"></image>
+      </navigator>
+      <view class="btn right" bindtap="genPoster">
+        <image class="img" src="../../images/map/shareBtn.png" mode="top"></image>
+      </view>
+    </view>
+    <view class="helpInfo">
+      <view class="title">紧急求助</view>
+      <view class="content">
+        <view class="nameContainer">
+          <view class="name">求助人: {{ currentPersonal.name }}</view>
+          <view class="states">
+            <view class="tag high">加急</view>
+            <view class="tag weibo">微博</view>
+          </view>
+        </view>
+        <view class="nameContainer">
+          <view class="name">电话: {{currentPersonal.contact }}</view>
+        </view>  
+        <view class="nameContainer">
+          <view class="name">求助时间: {{currentPersonal.timeOfIllness }}</view>
+        </view>                                 
+        <view class="nameContainer">
+          <view class="name">地址: {{currentPersonal.community}}</view>
+        </view>
+        <view class="desc">情况描述： {{currentPersonal.desc}} 
+        </view>        
+      </view>
+    </view>
+  </view>  
+</view>

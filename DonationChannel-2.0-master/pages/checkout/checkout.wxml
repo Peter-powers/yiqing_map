@@ -1,0 +1,4 @@
+<cu-custom bgColor="bg-red" isBack="{{true}}">
+  <view slot="content">求助信息列表</view>
+  <view slot="backText">返回</view>  
+</cu-custom>

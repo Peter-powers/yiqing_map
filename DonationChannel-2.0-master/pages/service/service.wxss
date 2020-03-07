@@ -1,0 +1,70 @@
+.service-container {
+  height: 100%;
+  width: 750rpx;
+  display:flex;
+  flex-direction:column;
+  align-items: center;
+  padding-top: 100rpx;
+  position: relative;
+}
+
+.service-background{
+  position: fixed;
+  top: 0;
+  height: 100%;
+  width: 750rpx;
+  background: linear-gradient(180deg, #0081ff, #1cbbb4);
+  z-index: 1;
+
+}
+.servie-item-wrapper {
+  z-index: 10;
+  width: 700rpx;
+  height: 260rpx;
+  border-radius: 20rpx;
+  margin-bottom: 50rpx;
+  display: flex;
+  box-shadow: 0 15rpx 20rpx rgba(0,0,0,.2);
+  background: #ffffff
+}
+.service-icon-box {
+  width: 260rpx;
+  height: 260rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.service-icon {
+  width: 100rpx;
+  height: 100rpx;
+}
+
+.service-text-box {
+  width: 440rpx;
+  height: 260rpx;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.servie-title {
+  width: 440rpx;
+  height: 100rpx;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-end;
+  font-size: 40rpx;
+  font-weight: 700;
+
+}
+.service-desc {
+  display: flex;
+  justify-content: flex-start;
+  width: 440rpx;
+  padding: 20rpx 30rpx 0 0 ;
+  height: 120rpx;
+  font-size: 28rpx;
+  color: #bbbbbb
+}
+

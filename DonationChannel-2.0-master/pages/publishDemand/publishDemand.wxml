@@ -1,0 +1,64 @@
+<cu-custom bgColor="bg-red" isBack="{{true}}">
+  <view slot="content">发布求助信息</view>
+  <view slot="backText">返回</view>  
+</cu-custom>
+
+<view class="body">
+  <view class="location cuIcon-locationfill" bindtap="showLocation">杭州市西湖区浙江大学紫金港校区紫云三舍</view>
+  <view class="tableContainer">
+    <view class="item">
+      <view class="name">姓名</view>
+      <view>王大叔</view>
+    </view>
+    <view class="item">
+      <view class="name">电话</view>
+      <view>15258800907</view>
+    </view>
+  </view>
+  <navigator class="tableContainer" url="../../pages/helpKey/helpKey" open-type="navigate">
+    <view class="item">
+      <view class="name">求助关键词</view>
+      <view class="cuIcon-right">血浆</view>
+    </view>
+  </navigator>
+  <view class="tableContainer">
+    <view class="item">
+      <view class="name">年龄</view>
+      <view class="cuIcon-right">53</view>
+    </view>    
+    <view class="item">
+      <view class="name">发病日期</view>
+      <view class="cuIcon-right">2020-01-21</view>
+    </view>
+  </view>
+
+  <navigator class="tableContainer" url="../../pages/helpDesc/helpDesc" open-type="navigate">
+    <view class="item">
+      <view class="name">详情描述</view>
+      <view class="cuIcon-right"></view>
+    </view>
+  </navigator>
+  <view class="cu-bar bg-white margin-top">
+    <view class="action">
+      图片上传
+    </view>
+  </view>
+  <view class="cu-form-group">
+    <view class="grid col-4 grid-square flex-sub">
+      <view class="bg-img" wx:for="{{imgList}}" wx:key="{{index}}" bindtap="ViewImage" data-url="{{imgList[index]}}">
+        <image src='{{imgList[index]}}' mode='aspectFill'></image>
+        <view class="cu-tag bg-red" catchtap="DelImg" data-index="{{index}}">
+          <text class="cuIcon-close"></text>
+        </view>
+      </view>
+      <view class="solids" bindtap="ChooseImage" wx:if="{{imgList.length<4}}">
+        <text class="cuIcon-cameraadd"></text>
+      </view>
+    </view>
+  </view>
+</view>
+
+<view class="submitContainer">
+  <view class="money">求助信息将展示给附近专业人士</view>
+  <view class="submitBtn bg-red">立即发布</view>
+</view>

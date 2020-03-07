@@ -1,0 +1,45 @@
+<cu-custom bgColor="bg-gradual-blue" isBack="{{true}}">
+  <view slot="content">关注的求助信息</view>
+  <view slot="backText">返回</view>  
+</cu-custom>
+
+<view class="body">
+  <view class="button-lg-choose flex justify-around" bindtap="">
+    <view class="flex-sub">狗</view>
+    <view class="choosed flex-sub">猫</view>
+    <view class="flex-sub">其它</view>
+  </view>
+  <view class="petInfo">
+    <view class="avatar flex justify-between solid-bottom">
+      <view class="key">头像</view>
+      <view class="value">
+        <image class="avatar" src="https://ossweb-img.qq.com/images/lol/web201310/skin/big84000.jpg" mode="center"></image>
+      </view>
+    </view>  
+    <view class="infoItem flex justify-between solid-bottom">
+      <view class="key">名字</view>
+      <view class="value">二狗</view>
+    </view>
+    <view class="infoItem flex justify-between solid-bottom">
+      <view class="key">品种</view>
+      <view class="value">阿富汗猎犬</view>
+    </view>
+    <view class="infoItem flex justify-between solid-bottom">
+      <view class="key">性别</view>
+      <view class="value">公</view>
+    </view>
+    <view class="infoItem flex justify-between solid-bottom">
+      <view class="key">体重</view>
+      <view class="value">10</view>
+    </view>
+    <view class="infoItem flex justify-between solid-bottom">
+      <view class="key">生日</view>
+      <view class="value">2018-12-02</view>
+    </view>
+    <view class="infoItem flex justify-between">
+      <view class="key">是否绝育</view>
+      <view class="value">否</view>
+    </view>            
+  </view>
+  <view class="button-lg" bindtap="postAddPetInfo">确认添加</view>
+</view>

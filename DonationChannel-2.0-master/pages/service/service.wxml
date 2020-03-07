@@ -1,0 +1,15 @@
+<cu-custom bgColor="bg-blue">
+  <view slot="content">服务</view>
+</cu-custom>
+<view class="service-container">
+  <view class="service-background"></view>
+  <view wx:for="{{serviceList}}" wx:key="index" class="servie-item-wrapper">
+    <view class="service-icon-box">
+      <image mode="aspecFill" src="{{'/images/services/icon-item-' + index + '.svg'}}" class="service-icon"></image>
+    </view>
+    <view class="service-text-box">
+      <view class="servie-title">{{item.title}}</view>
+      <view class="service-desc">{{item.desc}}</view>
+    </view>
+  </view>
+</view>

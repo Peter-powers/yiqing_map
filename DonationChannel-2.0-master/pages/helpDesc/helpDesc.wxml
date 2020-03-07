@@ -1,0 +1,10 @@
+<cu-custom bgColor="bg-red" isBack="{{true}}">
+  <view slot="content">求助详情描述</view>
+  <view slot="backText">返回</view>  
+</cu-custom>
+<textarea class="textarea" 
+placeholder="此处详细描述您的需求"
+bindconfirm="_saveHelpInfo"></textarea>
+<view class="body">
+  <view class="button-lg" bindtap="saveHelpInfo">保存</view>
+</view>

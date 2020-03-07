@@ -1,0 +1,50 @@
+{
+  "pages": [
+    "pages/home/home",
+    "pages/publishDemand/publishDemand",
+    "pages/service/service",
+    "pages/me/me",
+    "pages/myCare/myCare",
+    "pages/myHelp/myHelp",
+    "pages/helpDesc/helpDesc",
+    "pages/helpKey/helpKey",
+    "pages/checkout/checkout"
+  ],
+  "window": {
+    "navigationStyle": "custom",
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTextStyle": "white"
+  },
+  "usingComponents": {
+    "cu-custom": "/colorui/components/cu-custom"
+  },
+  "sitemapLocation": "sitemap.json",
+  "permission": {
+    "scope.userLocation": {
+      "desc": "将为你显示周边求助信息"
+    }
+  }, 
+  "tabBar": {
+    "color": "#333333",
+    "selectedColor": "#0081ff",
+    "backgroundColor": "#ffffff",
+    "borderStyle": "white",
+    "list": [{
+      "pagePath": "pages/home/home",
+      "text": "附近",
+      "iconPath": "./images/tabbar/nearby.png",
+      "selectedIconPath": "./images/tabbar/nearby_current.png"
+    }, {
+      "pagePath": "pages/service/service",
+      "text": "服务",
+      "iconPath": "./images/tabbar/list.png",
+      "selectedIconPath": "./images/tabbar/list_current.png"      
+    }, {
+      "pagePath": "pages/me/me",
+      "text": "我的",
+      "iconPath": "./images/tabbar/me.png",
+      "selectedIconPath": "./images/tabbar/me_current.png"      
+    }]
+  }
+}
